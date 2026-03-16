@@ -1,0 +1,31 @@
+main idea of the project
+
+march 15, 2026
+
+Simple version
+
+User inputs destination and duration -->
+
+Possible places to visit at the destination -->
+
+See how many days they want this trip to be and plan it.
+
+Solution:
+
+ - How do i look at places to visit at a certain place? 
+    reddit? tripadvisor? facebook? 
+ - Even if i did, should i look at and use a dataset instead?
+    No, probably not, because it would be training a model and i feel like it is not necessary
+    to train a model for this problem.
+
+Specific plan:
+
+1. Look at start date flight and end date flight. Calculate the best deal 
+(ratio between cost and layover), list 5 cheapest and top 5 best deal
+    How does different websites have different prices, how can i get the lowest prices
+2. Same procejure for hotels but calculate cost vs distance between restaurants, places to visit
+    transportation cost, food prices/options, places to visit
+3. 
+
+
+
