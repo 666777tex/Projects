@@ -1,9 +1,5 @@
 main idea of the project
 
-march 15, 2026
-
-Simple version
-
 User inputs destination and duration -->
 
 Possible places to visit at the destination -->

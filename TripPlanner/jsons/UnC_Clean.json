@@ -1,0 +1,397 @@
+[
+    {
+        "name": "New York City",
+        "legalName": "new-york-city",
+        "country": "United States of America"
+    },
+    {
+        "name": "Washington D.C.",
+        "legalName": "washington-dc",
+        "country": "United States of America"
+    },
+    {
+        "name": "San Francisco",
+        "legalName": "san-francisco",
+        "country": "United States of America"
+    },
+    {
+        "name": "Los Angeles",
+        "legalName": "los-angeles",
+        "country": "United States of America"
+    },
+    {
+        "name": "Boston",
+        "legalName": "boston",
+        "country": "United States of America"
+    },
+    {
+        "name": "Chicago",
+        "legalName": "chicago",
+        "country": "United States of America"
+    },
+    {
+        "name": "Montreal",
+        "legalName": "montreal",
+        "country": "Canada"
+    },
+    {
+        "name": "Toronto",
+        "legalName": "toronto",
+        "country": "Canada"
+    },
+    {
+        "name": "Las Vegas",
+        "legalName": "las-vegas",
+        "country": "United States of America"
+    },
+    {
+        "name": "Seattle",
+        "legalName": "seattle",
+        "country": "United States of America"
+    },
+    {
+        "name": "New Orleans",
+        "legalName": "new-orleans",
+        "country": "United States of America"
+    },
+    {
+        "name": "Vancouver",
+        "legalName": "vancouver",
+        "country": "Canada"
+    },
+    {
+        "name": "Quebec City",
+        "legalName": "quebec-city",
+        "country": "Canada"
+    },
+    {
+        "name": "Nashville",
+        "legalName": "nashville",
+        "country": "United States of America"
+    },
+    {
+        "name": "San Diego",
+        "legalName": "san-diego",
+        "country": "United States of America"
+    },
+    {
+        "name": "Oahu",
+        "legalName": "oahu",
+        "country": "United States of America"
+    },
+    {
+        "name": "Miami",
+        "legalName": "miami",
+        "country": "United States of America"
+    },
+    {
+        "name": "Philadelphia",
+        "legalName": "philadelphia",
+        "country": "United States of America"
+    },
+    {
+        "name": "Orlando",
+        "legalName": "orlando",
+        "country": "United States of America"
+    },
+    {
+        "name": "Charleston",
+        "legalName": "charleston",
+        "country": "United States of America"
+    },
+    {
+        "name": "Savannah",
+        "legalName": "savannah",
+        "country": "United States of America"
+    },
+    {
+        "name": "Maui",
+        "legalName": "maui",
+        "country": "United States of America"
+    },
+    {
+        "name": "Victoria",
+        "legalName": "victoria",
+        "country": "Canada"
+    },
+    {
+        "name": "Portland Oregon",
+        "legalName": "portland",
+        "country": "United States of America"
+    },
+    {
+        "name": "Ottawa",
+        "legalName": "ottawa",
+        "country": "Canada"
+    },
+    {
+        "name": "Memphis",
+        "legalName": "memphis",
+        "country": "United States of America"
+    },
+    {
+        "name": "Hawaii Big Island",
+        "legalName": "hawaii",
+        "country": "United States of America"
+    },
+    {
+        "name": "Atlanta",
+        "legalName": "atlanta",
+        "country": "United States of America"
+    },
+    {
+        "name": "San Antonio",
+        "legalName": "san-antonio",
+        "country": "United States of America"
+    },
+    {
+        "name": "Denver",
+        "legalName": "denver",
+        "country": "United States of America"
+    },
+    {
+        "name": "Dallas",
+        "legalName": "dallas",
+        "country": "United States of America"
+    },
+    {
+        "name": "Houston",
+        "legalName": "houston",
+        "country": "United States of America"
+    },
+    {
+        "name": "Calgary",
+        "legalName": "calgary",
+        "country": "Canada"
+    },
+    {
+        "name": "Austin",
+        "legalName": "austin",
+        "country": "United States of America"
+    },
+    {
+        "name": "Phoenix",
+        "legalName": "phoenix",
+        "country": "United States of America"
+    },
+    {
+        "name": "Salem",
+        "legalName": "salem",
+        "country": "United States of America"
+    },
+    {
+        "name": "Key West",
+        "legalName": "key-west",
+        "country": "United States of America"
+    },
+    {
+        "name": "Halifax",
+        "legalName": "halifax",
+        "country": "Canada"
+    },
+    {
+        "name": "St Louis",
+        "legalName": "st-louis",
+        "country": "United States of America"
+    },
+    {
+        "name": "Fort Lauderdale",
+        "legalName": "fort-lauderdale",
+        "country": "United States of America"
+    },
+    {
+        "name": "St Augustine",
+        "legalName": "st-augustine",
+        "country": "United States of America"
+    },
+    {
+        "name": "Salt Lake City",
+        "legalName": "salt-lake-city",
+        "country": "United States of America"
+    },
+    {
+        "name": "Baltimore",
+        "legalName": "baltimore",
+        "country": "United States of America"
+    },
+    {
+        "name": "Yellowstone National Park",
+        "legalName": "yellowstone-national-park",
+        "country": "United States of America"
+    },
+    {
+        "name": "Portland, Maine",
+        "legalName": "portland-maine",
+        "country": "United States of America"
+    },
+    {
+        "name": "Detroit",
+        "legalName": "detroit",
+        "country": "United States of America"
+    },
+    {
+        "name": "Yosemite National Park",
+        "legalName": "yosemite-national-park",
+        "country": "United States of America"
+    },
+    {
+        "name": "Monterey",
+        "legalName": "monterey",
+        "country": "United States of America"
+    },
+    {
+        "name": "Charlotte",
+        "legalName": "charlotte",
+        "country": "United States of America"
+    },
+    {
+        "name": "Pittsburgh",
+        "legalName": "pittsburgh",
+        "country": "United States of America"
+    },
+    {
+        "name": "Kansas City",
+        "legalName": "kansas-city",
+        "country": "United States of America"
+    },
+    {
+        "name": "Cincinnati",
+        "legalName": "cincinnati",
+        "country": "United States of America"
+    },
+    {
+        "name": "Tampa",
+        "legalName": "tampa",
+        "country": "United States of America"
+    },
+    {
+        "name": "Asheville",
+        "legalName": "asheville",
+        "country": "United States of America"
+    },
+    {
+        "name": "Minneapolis-Saint Paul",
+        "legalName": "minneapolis",
+        "country": "United States of America"
+    },
+    {
+        "name": "Cleveland",
+        "legalName": "cleveland",
+        "country": "United States of America"
+    },
+    {
+        "name": "Anchorage",
+        "legalName": "anchorage",
+        "country": "United States of America"
+    },
+    {
+        "name": "Richmond",
+        "legalName": "richmond",
+        "country": "United States of America"
+    },
+    {
+        "name": "Albuquerque",
+        "legalName": "albuquerque",
+        "country": "United States of America"
+    },
+    {
+        "name": "Edmonton",
+        "legalName": "edmonton",
+        "country": "Canada"
+    },
+    {
+        "name": "Fairbanks",
+        "legalName": "fairbanks",
+        "country": "United States of America"
+    },
+    {
+        "name": "Fort Worth",
+        "legalName": "fort-worth",
+        "country": "United States of America"
+    },
+    {
+        "name": "Acadia National Park",
+        "legalName": "acadia-national-park",
+        "country": "United States of America"
+    },
+    {
+        "name": "Great Smoky Mountains National Park",
+        "legalName": "great-smoky-mountains-national-park",
+        "country": "United States of America"
+    },
+    {
+        "name": "Tucson",
+        "legalName": "tucson",
+        "country": "United States of America"
+    },
+    {
+        "name": "Cape Cod",
+        "legalName": "cape-cod",
+        "country": "United States of America"
+    },
+    {
+        "name": "St Petersburg, FL",
+        "legalName": "st-petersburg-florida",
+        "country": "United States of America"
+    },
+    {
+        "name": "Palm Springs",
+        "legalName": "palm-springs",
+        "country": "United States of America"
+    },
+    {
+        "name": "Sacramento",
+        "legalName": "sacramento",
+        "country": "United States of America"
+    },
+    {
+        "name": "Oklahoma City",
+        "legalName": "oklahoma-city",
+        "country": "United States of America"
+    },
+    {
+        "name": "Grand Teton National Park",
+        "legalName": "grand-teton-national-park",
+        "country": "United States of America"
+    },
+    {
+        "name": "Omaha",
+        "legalName": "omaha",
+        "country": "United States of America"
+    },
+    {
+        "name": "Olympic National Park",
+        "legalName": "olympic-national-park",
+        "country": "United States of America"
+    },
+    {
+        "name": "Everglades National Park",
+        "legalName": "everglades-national-park",
+        "country": "United States of America"
+    },
+    {
+        "name": "White Mountains National Forest",
+        "legalName": "white-mountains-national-forest",
+        "country": "United States of America"
+    },
+    {
+        "name": "Blue Ridge Parkway",
+        "legalName": "blue-ridge-parkway",
+        "country": "United States of America"
+    },
+    {
+        "name": "Mount Rainier National Park",
+        "legalName": "mount-rainier-national-park",
+        "country": "United States of America"
+    },
+    {
+        "name": "North Cascades Highway",
+        "legalName": "north-cascades-highway",
+        "country": "United States of America"
+    },
+    {
+        "name": "Mount St Helens National Volcanic Monument",
+        "legalName": "mount-st-helens-national-volcanic-monument",
+        "country": "United States of America"
+    }
+]

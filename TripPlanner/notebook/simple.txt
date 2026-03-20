@@ -1,0 +1,6 @@
+Input:
+ - destination
+ - number of days
+Output:
+ - list of places to visit
+ - simple day-by-day plan
