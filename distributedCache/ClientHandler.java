@@ -37,7 +37,7 @@ public class ClientHandler implements Runnable {
         return false;
     }
 
-    public void handleCommands(String message) {
+    public void handleCommands(String message) throws IOException {
         String[] parts = message.split(" ");
         String command = parts[0];
 
@@ -57,8 +57,9 @@ public class ClientHandler implements Runnable {
                 }
                 synchronized (Server.store) {
                     Server.store.put(setKey, setCache);
-                    sendMessage("Added");
                 }
+                Server.save();
+                sendMessage("Added");
                 break;
             case ("/get"):
                 String getKey = parts[1];
@@ -87,6 +88,7 @@ public class ClientHandler implements Runnable {
                         sendMessage("nil");
                     }
                 }
+                Server.save();
                 break;
             case ("/keys"):
                 synchronized (Server.store) {

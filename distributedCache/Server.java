@@ -1,58 +1,62 @@
 import java.io.*;
 import java.net.*;
 import java.util.*;
-// import com.opencsv.CSVWriter;
-
-import javax.management.RuntimeErrorException;
 
 public class Server {
     static List<ClientHandler> clients = Collections.synchronizedList(new ArrayList<>());
     static Map<String, CacheEntry> store = new HashMap<>();
+    static File file = new File("store.csv");
+
+    // saves the 
+    static void save() throws IOException {
+        FileWriter writer = new FileWriter(file, false);
+        writer.write("key,value,expireAt\n");
+        for (String key : store.keySet()) {
+            writer.append(key + "," + store.get(key).value + "," + store.get(key).expiresAt + "\n");
+        }
+        writer.close();
+    }
 
     public static void main(String args[]) throws IOException {
         // create a server socket on port number 9090
         ServerSocket serverSocket = new ServerSocket(9090);
-        File file = new File("store.csv");
         // if file exit, then look for expired and get rid of them, else, create a new
         // csv file
         if (file.exists() && !file.isDirectory()) {
-            FileWriter fwriter = new FileWriter(file);
             // read each one (BufferedReader) in the existed csv file and get rid of the
             // expired ones
             try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
                 reader.readLine();
                 String line;
+                // runs while loop through the csv file
                 while ((line = reader.readLine()) != null) {
                     String[] data = line.split(",");
                     String key = data[0];
                     String value = data[1];
                     String eA = data[2];
                     Long expireAt;
-                    if (eA.equals("null")){
+                    // gets rid of expired items, only add when item is not expired
+                    if (eA.equals("null")) {
                         expireAt = null;
                     } else {
                         expireAt = Long.valueOf(data[2]);
-
                     }
-                    if (expireAt != null && expireAt > System.currentTimeMillis()) {
+                    if (expireAt == null || expireAt > System.currentTimeMillis()) {
                         CacheEntry cache = new CacheEntry();
                         cache.value = value;
                         cache.expiresAt = expireAt;
                         store.put(key, cache);
                     }
                 }
-                fwriter.close();
-                for (String key : store.keySet()){
-
-                }
+                // for all items, in store, add them to the csv
+                save();
             } catch (IOException e) {
                 throw new RuntimeException("Error reading the file ", e);
             }
-            fwriter.close();
         } else {
             file.createNewFile();
             FileWriter fwriter = new FileWriter(file);
-            fwriter.append("key, value, expireAt");
+            fwriter.append("key,value,expireAt\n");
             fwriter.close();
         }
 
