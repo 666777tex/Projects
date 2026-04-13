@@ -1,12 +1,13 @@
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Server {
     static List<ClientHandler> clients = Collections.synchronizedList(new ArrayList<>());
-    static Map<String, CacheEntry> store = new HashMap<>();
-    static File file = new File("store.csv");
-
+    static Map<String, CacheEntry> store = new ConcurrentHashMap<>();
+    static File file;
+    static Map<Integer, PrintWriter> peerWriters = new HashMap<>();
     // saves the 
     static void save() throws IOException {
         FileWriter writer = new FileWriter(file, false);
@@ -18,10 +19,28 @@ public class Server {
     }
 
     public static void main(String args[]) throws IOException {
-        // create a server socket on port number 9090
-        ServerSocket serverSocket = new ServerSocket(9090);
-        // if file exit, then look for expired and get rid of them, else, create a new
-        // csv file
+        int port = Integer.parseInt(args[0]);
+        int sock = Integer.parseInt(args[1]);
+        file = new File("store-" + port + ".csv");
+        // create a server socket on input port number
+        ServerSocket serverSocket = new ServerSocket(port);
+        Thread t = new Thread(() -> {
+            while (true) {
+                try {
+                    Socket socket = new Socket("localhost", sock);
+                    PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
+                    peerWriters.put(sock, writer);
+                    break;
+                } catch (IOException e) {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException ie) {
+                    }
+                }
+            }
+        });
+        t.start();
+        // if file exit, then look for expired and get rid of them, else, create a new csv file
         if (file.exists() && !file.isDirectory()) {
             // read each one (BufferedReader) in the existed csv file and get rid of the
             // expired ones

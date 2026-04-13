@@ -59,6 +59,9 @@ public class ClientHandler implements Runnable {
                     Server.store.put(setKey, setCache);
                 }
                 Server.save();
+                for (PrintWriter peer : Server.peerWriters.values()) {
+                    peer.println("/replicate set " + setKey + " " + setValue + " " + setCache.expiresAt);
+                }
                 sendMessage("Added");
                 break;
             case ("/get"):
@@ -83,11 +86,15 @@ public class ClientHandler implements Runnable {
                     String deleteKey = parts[1];
                     if (Server.store.containsKey(deleteKey)) {
                         Server.store.remove(deleteKey);
+                        for (PrintWriter peer : Server.peerWriters.values()) {
+                            peer.println("/replicate delete " + deleteKey);
+                        }
                         sendMessage("Deleted");
                     } else {
                         sendMessage("nil");
                     }
                 }
+                
                 Server.save();
                 break;
             case ("/keys"):
@@ -111,8 +118,28 @@ public class ClientHandler implements Runnable {
                                 Server.store.remove(eK);
                             }
                         }
+                        Server.save();
 
                     }
+                }
+                break;
+            case ("/replicate"):
+                String subCommand = parts[1];
+                if (subCommand.equals("set")){
+                    CacheEntry replicateCache = new CacheEntry();
+                    replicateCache.value = parts[3];
+                    if (parts.length >= 5) {
+                        replicateCache.expiresAt = Long.parseLong(parts[4]);
+                    }
+                    synchronized (Server.store) {
+                        Server.store.put(parts[2], replicateCache);
+                    }
+                    Server.save();
+                } else if (subCommand.equals("delete")) {
+                    synchronized (Server.store) {
+                        Server.store.remove(parts[2]);
+                    }
+                    Server.save();
                 }
                 break;
             default:

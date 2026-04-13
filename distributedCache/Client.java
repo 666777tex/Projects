@@ -5,8 +5,9 @@ public class Client {
     static volatile boolean running = true;
 
     public static void main(String args[]) throws IOException {
+        int port = Integer.parseInt(args[0]);
         // connecting to the server
-        Socket socket = new Socket("localhost", 9090);
+        Socket socket = new Socket("localhost", port);
         //in and outs
         PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
 
